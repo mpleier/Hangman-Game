@@ -2,7 +2,7 @@
 //     console.log("working");
 
 
-var words = ["jukebox","kayak","kiosk","klutz","memento","mystify","numbskull","ostracize","oxygen","pajama","phlegm"];
+var words = ["Awkward","Bagpipes","Banjo","Bungler","Croquet","Crypt","Dwarves","Fervid","Fishhook","Fjord","Gazebo","Gypsy","Haiku","Haphazard","Hyphen","Ivory","Jazzy","Jiffy","Jinx","Jukebox","Kayak","Kiosk","Klutz","Memento","Mystify","Numbskull","Ostracize","Oxygen","Pajama","Phlegm","Pixel","Polka","Quad","Quip","Rhythmic","Rogue","Sphinx","Squawk","Swivel","Toady","Twelfth","Unzip","Waxy","Wildebeest","Yacht","Zealous","Zigzag","Zippy","Zombie"];
 
 var chars = [
   "a","b","c","d","e","f","g","h","i","j",
@@ -30,8 +30,8 @@ function print(){
 
 
 function randomWord() {
-  var char1 = words[Math.floor(Math.random()*11)];
-  return ""+char1;
+  var char1 = words[Math.floor(Math.random()*49)];
+  return ""+char1.toLowerCase();
 }
 
 function randomLetter() {

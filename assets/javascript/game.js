@@ -24,7 +24,7 @@ function restart() {
 }
 
 function print(){
-  document.getElementById("body").innerHTML = ("<h1>Hangman</h1><br><br> Guess what word I\'m thinking of<br><br>Wins: "+wins+"<br><br>Losses: "+losses+"<br><br>Guesses Left: "+guesses+"<br><br>Your Guesses so far: "+a+"<br>"+show)
+  document.getElementById("body").innerHTML = ("<h1>Hangman</h1><br><br> Guess what word I\'m thinking of<br><br>Press a letter key on your keyboard to guess a letter.<br><br>Wins: "+wins+"<br><br>Losses: "+losses+"<br><br>Guesses Left: "+guesses+"<br><br>Your Guesses so far: "+a+"<br>"+show)
 
 }
 

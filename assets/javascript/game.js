@@ -65,7 +65,7 @@ function checkKey(e) {
     var event = window.event ? window.event : e;
     latest = event.key.toLowerCase();
     key.forEach(function(item, i) { if (item == latest) show[i] = latest; });
-    if (a.indexOf(latest)<0) {
+    if (a.indexOf(latest)<0&&chars.indexOf(latest)>0) {
 
     a.push(latest);
     guesses = guesses--;

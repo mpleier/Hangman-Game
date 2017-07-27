@@ -8,21 +8,40 @@ var chars = [
 ];
 
 var answer = randomWord();
+var tall = 10;
+var high = 1;
+
+function box(a){
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.clearRect(0, 0, 80, 300);
+ctx.fillRect(0,0,80,a);
+}
+
+var last = "";
 
 var latest = "";
 
 function restart() {
-    var answer = randomWord();
+    last = answer;
+    answer = randomWord();
     key.length = 0;
     key = answer.split("")
     show.length = 0;
     show = answer.split("");
     show.fill("_");
+    high = 1;
+    tall=10;
+    print();
+    box(tall);
+
 }
 
 function print() {
-    document.getElementById("body").innerHTML = ("<h1>Hangman</h1><br><br> Guess what word I\'m thinking of<br><br>Press a letter key on your keyboard to guess a letter.<br><br>Wins: " + wins + "<br><br>Losses: " + losses + "<br><br>Guesses Left: " + guesses + "<br><br>Your Guesses so far: " + a + "<br>" + show)
-
+  document.getElementById("body").innerHTML = ("<h1>Hangman</h1><br><br> Guess what word I\'m thinking of<br><br>Press a letter key on your keyboard to guess a letter.<br><br>The last answer was: " + last + "<br><br>Wins: " + wins + "<br><br>Losses: " + losses + "<br><br>Guesses Left: " + guesses + "<br><br>Your Guesses so far: " + a + "<br>" + show);
+  box(tall);
 }
 
 
@@ -89,7 +108,9 @@ function checkKey(e) {
             if (key.indexOf(latest) > -1) {
                 z = print();
             } else {
-                guesses--
+                guesses--;
+		              high++;
+                  tall = high*10;
                 z = print();
             }
 
